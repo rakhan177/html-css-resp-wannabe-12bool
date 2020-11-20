@@ -3,8 +3,13 @@ img {
   margin: 20px 0;
 }
 
+h1{
+  color: red;
+}
+
 h3{
   margin-bottom: 20px;
+  color: blue;
 }
 
 hr{
@@ -16,6 +21,11 @@ hr{
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container > *{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .container.third img{
@@ -33,5 +43,26 @@ hr{
 }
 
 @media screen and (max-width: 991px){
+  .container.third > div:nth-of-type(2){
+    border-right: 1px solid black;
+  }
 
+  .container.third > div:nth-child(2) hr{
+    display: none;
+  }
+
+  h3{
+    margin-bottom: 20px;
+    color: green;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .container.third > div:nth-child(2) hr{
+    display: block;
+  }
+
+  .container.third > div:nth-of-type(2){
+    border-right: 0;
+  }
 }

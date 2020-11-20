@@ -29,3 +29,9 @@ hr{
 .container.third > div:nth-of-type(2n+3){
   margin-top: 80px;
 }
+
+@media screen and (max-width: 991px){
+  .container.third hr:nth-of-type(2){
+    display: none;
+  }
+}
